@@ -1,0 +1,102 @@
+playwright - a person who writes play
+
+why playwright 
+
+
+* cross platform, Browsers, Languages
+* own Built in Test Runner
+* Integrated API Testing
+* MCP
+
+PlayWright Architecture!
+
+PlayWright - happens via webSocket protocol!
+
+Test Runner -> Client API ( PlayWright- core ) -> Communication Layer ( Web Socket ) -> Browser Server -> Browsers ( chrome, etc )
+
+Playwright Installation
+
+npm init playwright@latest
+
+npx playwight --help ( to check and confirm )
+
+npx playwright test ( runs the spec.ts files from the 'tests' folder, auto runs in headless mode that is no browser  )
+
+npx playwright test --headed ( runs with opening browser )
+
+npx playwright show-report ( by default shows the test report, check playwright.config.ts ' reporter: 'html' '
+
+Naming Conventions
+
+Files/Folders  ( kebab-case ) => page-ojects/, file-helper.js
+Page and Spec Files ( dot-separated ) => nopcommerce.home.page.ts
+Class Names   ( Pascal Case ) => LoginPage
+Variables    camelCase
+Constants    UPPER_SNAKE_CASE => BASE_URL
+
+
+Installl VS code extentions!
+
+= vscode - icons
+= prettier - Code formatter
+= path Intellisense
+= npm Intellisece
+= DotENV
+= JavaScript (ES6) code snippets
+= .gitignore Generator
+
+
+
+
+https://playwright.dev/docs/api/class-test
+
+
+
+codegen: ( very efficient feature )
+
+* eliminats manual coding
+* records the test flow
+* generates best locators
+* reduces test writing drastically
+
+
+go To CodeGen > Record New > open a browser and select elements you want to test
+
+
+
+Grouping - when you have more than 1 tests it is always better to group them and then test
+
+when we group tests, there is a chance of repetition of steps, THIS IS WHERE CONCEPT OF HOOKS IS introduced 
+
+
+
+Locator Strategies
+
+page.getBy*() and page.locator() method returns the 'locator' object
+
+
+
+
+
+========================== Debugging Options =====================================\
+1. VS Code Test explorer 
+2. UI Mode ( in the run command add -- ui ) best
+3 Debug flag ( in the command PWDEBUG=1
+4 Trace Viewer > npx playwright test tests/test-2.spec.ts --trace on --headed
+
+go to trace.playwright.dev and put the file
+
+===========================Allure Reporter ==========================
+
+===================== PLAYWRIGHT CORE CAPABLITIES ==================
+
+playwright.config.ts ===> is the first file which runs
+
+
+
+
+
+
+
+
+
