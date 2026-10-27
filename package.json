@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "Playwright E2E Tests with AI MCPs",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "demo": "npx playwright test tests/demo/mytest.spec.ts --headed",
+    "demo:firefox":"npx playwright test tests/demo/mytest.spec.ts --headed",
+    "login":"npx playwright test tests/functional/login.spec.ts --headed",
+    "test-flag": "PWDEBUG=1 npx playwright test tests/functional/test-1.spec.ts"
+  },
   "keywords": [
     "playwright",
     "playwright-mcp"
